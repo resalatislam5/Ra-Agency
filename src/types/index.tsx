@@ -17,6 +17,12 @@ export interface TitleBarType {
 export interface countTypes {
   count: number;
   title: string;
-  style: string;
+  style?: string;
   text: string;
+}
+
+export interface inputTypes {
+  type: string;
+  placeholder: string;
+  styles?: string
 }

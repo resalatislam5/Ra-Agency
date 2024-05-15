@@ -1,43 +1,70 @@
+// sponserItems
 import aibaba from "@/assets/Alibaba_Group-Logo.wine 1.png";
 import pinterest from "@/assets/Pinterest-Logo.wine.png";
 import dropbox from "@/assets/Dropbox_(service)-Logo.wine.png";
 import amazon from "@/assets/Amazon_(company)-Logo.wine.png";
 import spacex from "@/assets/SpaceX-Logo.wine.png";
+// sponserItems end
+// digitalMarkingItem
 import search from "@/assets/search-engine 1.png";
 import payPer from "@/assets/pay-per-click 1.png";
 import website from "@/assets/web-development 1.png";
 import content from "@/assets/content 1.png";
 import email from "@/assets/email-marketing 1.png";
 import social from "@/assets/social-media-marketing 1.png";
+// digitalMarkingItem end
+// ecoFounderInfo
+import jerome from "@/assets/jerome.png";
+import david from "@/assets/david.png";
+import matthaw from "@/assets/mahew.png";
+import patrick from "@/assets/patrick.png";
+import facebook from "@/assets/facebook (2).png";
+import twiter from "@/assets/twitter (2).png";
+import intagram from "@/assets/instagram (1).svg";
+import linkedin from "@/assets/linkedin (1) 1.svg";
+// ecoFounderInfo end
+//contactInfo
+import phone from "@/assets/phone (1) 1.svg";
+import message from "@/assets/message (1) 1.svg";
+import location from "@/assets/online-location 1 (1).svg";
+//contactInfo end
+//short id
+const shortid = require("shortid");
+// testtimonial
+import imgE from "@/assets/elegant-businessman-office 1.png";
+// testtimonial
+// Digital Brilliance
+import groupBiness1 from "@/assets/group-business.png"
+// Digital Brilliance end
 
 export const navItems = [
   {
-    _id: 1001,
+    _id: shortid.generate(),
     title: "HOME",
     to: "/",
   },
   {
-    _id: 1002,
+    _id: shortid.generate(),
     title: "PAGES",
     to: "/",
   },
   {
-    _id: 1003,
+    _id: shortid.generate(),
     title: "BLOG",
     to: "/",
   },
   {
-    _id: 1004,
+    _id: shortid.generate(),
     title: "PORTFOLIO",
     to: "/",
   },
   {
-    _id: 1005,
+    _id: shortid.generate(),
     title: "SHOP",
     to: "/",
   },
   {
-    _id: 1006,
+    _id: shortid.generate(),
     title: "CONTACT",
     to: "/",
   },
@@ -45,54 +72,54 @@ export const navItems = [
 
 export const sponserItems = [
   {
-    id: 2001,
+    id: shortid.generate(),
     img: aibaba,
   },
   {
-    id: 2002,
+    id: shortid.generate(),
     img: pinterest,
   },
   {
-    id: 2003,
+    id: shortid.generate(),
     img: dropbox,
   },
   {
-    id: 2004,
+    id: shortid.generate(),
     img: amazon,
   },
   {
-    id: 2005,
+    id: shortid.generate(),
     img: spacex,
   },
 ];
 
 export const digitalMarkingItem = [
   {
-    id: 3001,
+    id: shortid.generate(),
     img: search,
     title: "Search Engine Optimization",
     text: "Share Processes And Data Secure Lona To Know Basis Our Team Assured Your Site Is Always Safe And",
     to: "/",
-    style: "border-b-0 border",
+    style: "border border-b-0",
   },
   {
-    id: 3002,
+    id: shortid.generate(),
     img: payPer,
     title: "Pay-Per-Click Advertising",
     text: "Share Processes And Data Secure Lona To Know Basis Our Team Assured Your Site Is Always Safe And",
     to: "/",
-    style: "border-b-0 border",
+    style: "border border-b-0",
   },
   {
-    id: 3033,
+    id: shortid.generate(),
     img: website,
     title: "Website Development",
     text: "Share Processes And Data Secure Lona To Know Basis Our Team Assured Your Site Is Always Safe And",
     to: "/",
-    style: "border-b-0 border",
+    style: "border border-b-0",
   },
   {
-    id: 3004,
+    id: shortid.generate(),
     img: content,
     title: "Content Marketing",
     text: "Share Processes And Data Secure Lona To Know Basis Our Team Assured Your Site Is Always Safe And",
@@ -100,7 +127,7 @@ export const digitalMarkingItem = [
     style: "border",
   },
   {
-    id: 3005,
+    id: shortid.generate(),
     img: email,
     title: "Email Marketing",
     text: "Share Processes And Data Secure Lona To Know Basis Our Team Assured Your Site Is Always Safe And",
@@ -108,11 +135,215 @@ export const digitalMarkingItem = [
     style: "border",
   },
   {
-    id: 3006,
+    id: shortid.generate(),
     img: social,
     title: "Social Media Marketing",
     text: "Share Processes And Data Secure Lona To Know Basis Our Team Assured Your Site Is Always Safe And",
     to: "/",
     style: "border",
+  },
+];
+
+export const ceoFounderInfo = [
+  {
+    id: shortid.generate(),
+    img: jerome,
+    name: "Jerome C. Ramirez",
+    title: "CEO & Founder",
+    links: [
+      {
+        img: facebook,
+        to: "/",
+      },
+      {
+        img: twiter,
+        to: "/",
+      },
+      {
+        img: linkedin,
+        to: "/",
+      },
+      {
+        img: intagram,
+        to: "/",
+      },
+    ],
+  },
+  {
+    id: shortid.generate(),
+    img: david,
+    name: "David George N. Butler",
+    title: "Senior Manager",
+    links: [
+      {
+        img: facebook,
+        to: "/",
+      },
+      {
+        img: twiter,
+        to: "/",
+      },
+      {
+        img: linkedin,
+        to: "/",
+      },
+      {
+        img: intagram,
+        to: "/",
+      },
+    ],
+  },
+  {
+    id: shortid.generate(),
+    img: matthaw,
+    name: "Matthew M. Armstead",
+    title: "Web Designer",
+    links: [
+      {
+        img: facebook,
+        to: "/",
+      },
+      {
+        img: twiter,
+        to: "/",
+      },
+      {
+        img: linkedin,
+        to: "/",
+      },
+      {
+        img: intagram,
+        to: "/",
+      },
+    ],
+  },
+  {
+    id: shortid.generate(),
+    img: patrick,
+    name: "Patrick M. Piazza",
+    title: "Junior manager",
+    links: [
+      {
+        img: facebook,
+        to: "/",
+      },
+      {
+        img: twiter,
+        to: "/",
+      },
+      {
+        img: linkedin,
+        to: "/",
+      },
+      {
+        img: intagram,
+        to: "/",
+      },
+    ],
+  },
+];
+
+export const contactInfo = [
+  {
+    id: shortid.generate(),
+    img: phone,
+    title: "Any Questions? Call us",
+    text: "+1 (246) 333 0079",
+    to: "tel:+1 (246) 333 0079",
+  },
+  {
+    id: shortid.generate(),
+    img: message,
+    title: "Any Questions? Email us",
+    text: "Resalatislam5@gmail.com",
+    to: "mailto:resalatislam5@gmail.com",
+  },
+  {
+    id: shortid.generate(),
+    img: location,
+    title: "51 Somestreet Cambridge",
+    text: "CB4 3AA, United Kingdom",
+    to: "#",
+  },
+];
+
+export const tasttimonialItem = [
+  {
+    id: shortid.generate(),
+    title:
+      "\"I just wanted to share a quick note and let you know that you guys do a really good job. I'm glad idecided to work with you. It's really great how easy your websites are to update and manage. Inever have any problem at all.1000\"",
+    img: imgE,
+    name: "Sridhar Ramaswamy1",
+    jobTitle: "CEO & Founder",
+  },
+  {
+    id: shortid.generate(),
+    title:
+      "\"I just wanted to share a quick note and let you know that you guys do a really good job. I'm glad idecided to work with you. It's really great how easy your websites are to update and manage. Inever have any problem at all.2000\"",
+    img: imgE,
+    name: "Sridhar Ramaswamy2",
+    jobTitle: "CEO & Founder",
+  },
+  {
+    id: shortid.generate(),
+    title:
+      "\"I just wanted to share a quick note and let you know that you guys do a really good job. I'm glad idecided to work with you. It's really great how easy your websites are to update and manage. Inever have any problem at all.3\"",
+    img: imgE,
+    name: "Sridhar Ramaswamy3",
+    jobTitle: "CEO & Founder",
+  },
+  {
+    id: shortid.generate(),
+    title:
+      "\"I just wanted to share a quick note and let you know that you guys do a really good job. I'm glad idecided to work with you. It's really great how easy your websites are to update and manage. Inever have any problem at all.3\"",
+    img: imgE,
+    name: "Sridhar Ramaswamy3",
+    jobTitle: "CEO & Founder",
+  },
+  {
+    id: shortid.generate(),
+    title:
+      "\"I just wanted to share a quick note and let you know that you guys do a really good job. I'm glad idecided to work with you. It's really great how easy your websites are to update and manage. Inever have any problem at all.3\"",
+    img: imgE,
+    name: "Sridhar Ramaswamy3",
+    jobTitle: "CEO & Founder",
+  },
+  {
+    id: shortid.generate(),
+    title:
+      "\"I just wanted to share a quick note and let you know that you guys do a really good job. I'm glad idecided to work with you. It's really great how easy your websites are to update and manage. Inever have any problem at all.3\"",
+    img: imgE,
+    name: "Sridhar Ramaswamy3",
+    jobTitle: "CEO & Founder",
+  },
+];
+
+export const digitalBrillianceItem = [
+  {
+    id: shortid.generate(),
+    img: groupBiness1,
+    business: "Business",
+    date: "02 Apr 2024",
+    text: "Stay Ahead in the Digital Side Pocket",
+    linkTitle: "Read More",
+    to: "/",
+  },
+  {
+    id: shortid.generate(),
+    img: groupBiness1,
+    business: "Business",
+    date: "02 Apr 2024",
+    text: "Our Futuristic Marketing Realtor Should Read",
+    linkTitle: "Read More",
+    to: "/",
+  },
+  {
+    id: shortid.generate(),
+    img: groupBiness1,
+    business: "Business",
+    date: "02 Apr 2024",
+    text: "Grow your appraisal skills and real estate career?",
+    linkTitle: "Read More",
+    to: "/",
   },
 ];
