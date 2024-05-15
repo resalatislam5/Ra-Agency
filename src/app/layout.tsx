@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
-import { Navber } from "@/components";
+import { Footer, Navber } from "@/components";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -20,9 +20,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.className} max-w-7xl mx-auto text-[#CCDEFF]`}>
-        <Navber />
-        {children}
+      <body className={`${poppins.className} text-[#CCDEFF]`}>
+        <div className="max-w-7xl mx-auto">
+          <Navber />
+          {children}
+        </div>
+        <Footer />
       </body>
     </html>
   );

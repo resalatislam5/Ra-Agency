@@ -34,7 +34,7 @@ const shortid = require("shortid");
 import imgE from "@/assets/elegant-businessman-office 1.png";
 // testtimonial
 // Digital Brilliance
-import groupBiness1 from "@/assets/group-business.png"
+import groupBiness1 from "@/assets/group-business.png";
 // Digital Brilliance end
 
 export const navItems = [
@@ -345,5 +345,82 @@ export const digitalBrillianceItem = [
     text: "Grow your appraisal skills and real estate career?",
     linkTitle: "Read More",
     to: "/",
+  },
+];
+
+export const footerItems = [
+  {
+    id: shortid.generate(),
+    title: "Start a conversation",
+    links: [
+      {
+        id: shortid.generate(),
+        text: "resalatislam5@gmail.com",
+        to: "mailto:",
+      },
+    ],
+  },
+  {
+    id: shortid.generate(),
+    title: "New business:",
+    links: [
+      {
+        id: shortid.generate(),
+        text: "+8801750605440",
+        to: "tel:",
+      },
+    ],
+  },
+  {
+    id: shortid.generate(),
+    title: "Useful Links",
+    links: [
+      {
+        id: shortid.generate(),
+        text: "Careers",
+        to: "/",
+      },
+      {
+        id: shortid.generate(),
+        text: "Our Team",
+        to: "/",
+      },
+      {
+        id: shortid.generate(),
+        text: "Latest Projects",
+        to: "/",
+      },
+      {
+        id: shortid.generate(),
+        text: "Awarded portfolio",
+        to: "/",
+      },
+      {
+        id: shortid.generate(),
+        text: "FAQ",
+        to: "/",
+      },
+    ],
+  },
+  {
+    id: shortid.generate(),
+    title: "Address",
+    links: [
+      {
+        id: shortid.generate(),
+        text: "Las Vegas, NV, USA",
+        to: "https://www.google.com/maps/@23.773184,90.4003584,13z",
+      },
+      {
+        id: shortid.generate(),
+        text: "201 Spear Street,",
+        to: "https://www.google.com/maps/@23.773184,90.4003584,13z",
+      },
+      {
+        id: shortid.generate(),
+        text: "San Francisco, CA, USA",
+        to: "https://www.google.com/maps/@23.773184,90.4003584,13z",
+      },
+    ],
   },
 ];

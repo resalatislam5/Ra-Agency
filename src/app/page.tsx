@@ -292,7 +292,7 @@ export default function Home() {
       </section>
       {/* ------ testtimonial section end ------ */}
       {/* ------ Digital Brilliance section start ------ */}
-      <section className="mt-[120px] pb-20">
+      <section className="mt-[120px]">
         <TitleBar title="Empowering Brands With Digital Brilliance">
           <div className="grid grid-cols-2 mt-[50px] gap-14">
             {/* left-section  */}
