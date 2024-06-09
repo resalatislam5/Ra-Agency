@@ -56,7 +56,7 @@ export const navItems = [
   {
     _id: shortid.generate(),
     title: "PORTFOLIO",
-    to: "/",
+    to: "/portfolio",
   },
   {
     _id: shortid.generate(),
