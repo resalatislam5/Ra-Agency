@@ -66,7 +66,7 @@ export const navItems = [
   {
     _id: shortid.generate(),
     title: "CONTACT",
-    to: "/",
+    to: "/contact",
   },
 ];
 
