@@ -21,10 +21,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${poppins.className} text-[#CCDEFF]`}>
-        <div className="max-w-7xl mx-auto">
-          <Navber />
-          {children}
-        </div>
+        <Navber />
+        {children}
         <Footer />
       </body>
     </html>

@@ -53,7 +53,7 @@ const TitleBar = ({ children, title }: TitleBarType) => {
 
 export default function Home() {
   return (
-    <main>
+    <main className="max-w-7xl mx-auto pt-[200px]">
       {/* ------ banner section start ------ */}
       <div className="grid grid-cols-2 gap-5 items-center mt-5">
         {/* left side */}
@@ -352,7 +352,7 @@ export default function Home() {
             </div>
             {/* right-section  */}
             <div className="flex flex-col gap-5">
-              {digitalBrillianceItem.map(item => (
+              {digitalBrillianceItem.map((item) => (
                 <div key={item.id} className="flex items-center text-paragraph">
                   <div className="w-80">
                     <Image src={item.img} alt="img" />
@@ -399,9 +399,7 @@ export default function Home() {
                         {item.date}
                       </div>
                     </div>
-                    <p className=" font-bold">
-                      {item.text}
-                    </p>
+                    <p className=" font-bold">{item.text}</p>
                     <Link className="text-[#CCFF00]" href={item.to}>
                       Read More
                     </Link>

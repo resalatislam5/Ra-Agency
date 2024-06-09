@@ -3,12 +3,12 @@ import { navItems } from "@/constants";
 import Link from "next/link";
 import { useState } from "react";
 import CustomButton from "../utils/CustomButton";
-import logo from "@/assets/logo.png"
+import logo from "@/assets/logo.png";
 import Image from "next/image";
 function Navber() {
   const [navShow, SetNavShow] = useState(false);
   return (
-    <>
+    <div className="max-w-7xl mx-auto relative">
       {/*------ mobile screen show this code start ------- */}
       <div
         className={`${
@@ -35,11 +35,16 @@ function Navber() {
       </div>
       {/*------ mobile screen show this code end ------- */}
       {/*------ desktop screen show this code start ------- */}
-      <header className="py-[55px]">
+      <header className="py-[55px] absolute top-0 left-0 right-0">
         <div className="flex justify-between">
           <div className="flex items-center gap-3">
             <div className="w-[50px] h-[50px]">
-              <Image className="w-full h-full" src={logo} loading="lazy" alt="logo" />
+              <Image
+                className="w-full h-full"
+                src={logo}
+                loading="lazy"
+                alt="logo"
+              />
             </div>
             <h1 className="text-lg font-bold">Ra Agency</h1>
           </div>
@@ -61,7 +66,7 @@ function Navber() {
         </div>
       </header>
       {/*------ desktop screen show this code end ------- */}
-    </>
+    </div>
   );
 }
 
