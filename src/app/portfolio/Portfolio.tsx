@@ -9,7 +9,7 @@ function Portfolio() {
       <section className="max-w-7xl mx-auto my-[120px]">
         <div className="grid grid-cols-3 gap-[30px]">
           {[...Array(9)].map((e, i) => (
-            <Link className="pb-[70px]" href={`/protfolio/${i}`} key={i}>
+            <Link className="pb-[70px]" href={`/portfolio/${i}`} key={i}>
               {/* image */}
               <div className="">
                 <Image src={img} alt="img" />
