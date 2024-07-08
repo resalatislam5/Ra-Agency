@@ -1,3 +1,4 @@
+// All interface here
 import { ReactNode } from "react";
 
 export interface coustomButtonTypes {

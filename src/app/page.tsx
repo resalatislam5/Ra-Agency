@@ -38,6 +38,7 @@ const ListItem = ({ title }: ListItemType) => {
   );
 };
 
+// This is a component that shows the main title and creates gaps between each section
 const TitleBar = ({ children, title }: TitleBarType) => {
   return (
     <div className="mt-[120px]">
