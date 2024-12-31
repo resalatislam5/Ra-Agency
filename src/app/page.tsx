@@ -17,6 +17,13 @@ import {
   sponserItems,
 } from "@/constants";
 import Link from "next/link";
+import { Metadata } from "next";
+
+// TODO:
+export const metadata: Metadata = {
+  title: "Home || Ra Agency",
+  description: "Ra Agency",
+};
 
 const ListItem = ({ title }: ListItemType) => {
   return (
@@ -41,9 +48,11 @@ const ListItem = ({ title }: ListItemType) => {
 // This is a component that shows the main title and creates gaps between each section
 const TitleBar = ({ children, title }: TitleBarType) => {
   return (
-    <div className="mt-[120px]">
-      <div className="w-[50%] mx-auto">
-        <h1 className="text-heading font-bold text-center">{title}</h1>
+    <div className="sm:mt-[120px] mt-[80px]">
+      <div className="lg:w-[50%] mx-auto">
+        <h1 className="sm:text-heading text-2xl font-bold text-center">
+          {title}
+        </h1>
       </div>
       {children}
     </div>
@@ -52,181 +61,190 @@ const TitleBar = ({ children, title }: TitleBarType) => {
 
 export default function Home() {
   return (
-    <main className="max-w-7xl mx-auto pt-[200px]">
+    <main className="max-w-7xl mx-auto lg:pt-[200px] pt-[120px]">
       {/* ------ banner section start ------ */}
-      <div className="grid grid-cols-2 gap-5 items-center mt-5">
+      <div className="grid lg:grid-cols-2 gap-5 items-center mt-5 px-5">
         {/* left side */}
-        <div className="font-bold">
-          <p className="text-paragraph ">
+        <div className="font-bold lg:order-1 order-2 flex flex-col items-center lg:items-start text-center lg:text-left lg:flex-none ">
+          <p className="sm:text-paragraph text-sm">
             Digital Analytics and Strategy Consulting
           </p>
-          <h1 className="text-[60px] leading-[72px] pt-5 mb-14">
+          <h1 className="lg:text-[60px] sm:text-5xl text-3xl lg:leading-[72px] pt-5 sm:mb-14 mb-7">
             Creative Digital Marketing Best Agency
           </h1>
           <CustomButton title="Contact Us →" to="/" style="w-fit" />
         </div>
         {/* right side */}
-        <div className="">
+        <div className="mx-auto lg:mx-auto lg:order-2 order-1">
           <Image src={banner} alt="banner img" />
         </div>
       </div>
       {/* ------ banner section end ------ */}
       {/* ------ sponer section start ------ */}
-      <div className="bg-[#CCDEFF] flex justify-around items-center rounded-[20px] mt-[120px]">
+      <div className="bg-[#CCDEFF] md:flex hidden justify-around items-center rounded-[20px] lg:mt-[120px] mt-[80px] mx-5">
         {sponserItems.map((item) => (
           <Image key={item.id} src={item.img} alt="" />
         ))}
       </div>
       {/* ------ sponer section end ------ */}
       {/* ------ about section start ------ */}
-      <div className="grid grid-cols-2 gap-[106px] items-center mt-[120px]">
+      <div className="grid lg:grid-cols-2 grid-cols-1 lg:gap-[106px] gap-10 items-center lg:mt-[120px] mt-[80px] px-5">
         {/* left side */}
-        <div className="">
+        <div className="mx-auto lg:mx-auto">
           <Image src={aboutImg} alt="banner img" />
         </div>
         {/* right side */}
-        <div className="flex flex-col gap-5">
-          <p className="text-paragraph font-bold ">About Us Company</p>
-          <h1 className="text-heading font-bold ">
+        <div className="flex flex-col items-center lg:items-start text-center lg:text-left gap-5">
+          <p className="sm:text-paragraph text-sm font-bold ">
+            About Us Company
+          </p>
+          <h1 className="sm:text-heading text-3xl font-bold ">
             Creative Digital Marketing Best Agency
           </h1>
-          <p className="text-paragraph">
+          <p className="sm:text-paragraph text-sm">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
             molestieconsequat erat iaculis. Duis quam lorem, bibendum at
             bibendum ut, asdolor urna. Proin rutrum lobortis vulputate
           </p>
-          <div className="grid grid-cols-2 gap-5">
+          <div className="grid sm:grid-cols-2 gap-5">
             <ListItem title="Digital Strategy" />
             <ListItem title="SEO Optimization" />
             <ListItem title="Marketing" />
             <ListItem title="First Working Proces" />
           </div>
-          <CustomButton title="Contact Us →" to="/" style="w-fit mt-12" />
+          <CustomButton
+            title="Contact Us →"
+            to="/"
+            style="w-fit sm:mt-12 mt-7"
+          />
         </div>
       </div>
       {/* ------ about section end ------ */}
       {/* ------ digital section start ------ */}
-      <TitleBar title="We Offer A Wide Range Of Digital Marketing">
-        <div className="mt-[92px] grid grid-cols-3">
-          {digitalMarkingItem.map((item) => (
-            <div
-              key={item.id}
-              className={`${item.style} border-[#CCDEFF] hover:border-t-0 px-[42px] py-[33px] flex flex-col gap-5`}
-            >
-              <div className="">
-                <Image src={item.img} alt={item.title} />
+      <div className="px-5">
+        <TitleBar title="We Offer A Wide Range Of Digital Marketing">
+          <div className="lg:mt-[92px] sm:mt-[60px] mt-10 grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1">
+            {digitalMarkingItem.map((item) => (
+              <div
+                key={item.id}
+                className={`${item.style} border-[#CCDEFF] hover:border-t-0 px-[42px] py-[33px] flex flex-col gap-5`}
+              >
+                <div className="">
+                  <Image src={item.img} alt={item.title} />
+                </div>
+                <h3 className="sm:text-2xl text-xl font-bold">{item.title}</h3>
+                <p className="sm:text-paragraph text-sm">{item.text}</p>
+                <CustomButton
+                  title="Read More"
+                  to="/"
+                  style="bg-transparent text-[#CCFF00] font-normal !px-0 !py-0"
+                  img={arrowL}
+                />
               </div>
-              <h3 className="text-2xl font-bold">{item.title}</h3>
-              <p className="text-paragraph ">{item.text}</p>
-              <CustomButton
-                title="Read More"
-                to="/"
-                style="bg-transparent text-[#CCFF00] font-normal !px-0 !py-0"
-                img={arrowL}
-              />
-            </div>
-          ))}
-        </div>
-      </TitleBar>
+            ))}
+          </div>
+        </TitleBar>
+      </div>
       {/* ------ digital section end ------ */}
       {/* ------ count section start ------ */}
-      <div className="mt-[120px] flex justify-between divide-x divide-[#575757]">
+      <div className="lg:mt-[120px] mt-[80px] grid lg:grid-cols-4 grid-cols-2 lg:divide-x sm:justify-items-center justify-items-start gap-10 lg:justify-items-start divide-[#575757] px-5">
         <CounterSection
           title="Satisfied Clients"
           count={56}
-          style="pr-[50px]"
+          style="lg:pr-[50px]"
           text="%"
         />
         <CounterSection
           title="We Project Completed"
           count={644}
-          style="pl-[50px] pr-[50px]"
+          style="lg:pl-[50px] lg:pr-[50px]"
           text="+"
         />
         <CounterSection
           title="Award Recognitions"
           count={86}
-          style="pl-[50px] pr-[50px]"
+          style="lg:pl-[50px] lg:pr-[50px]"
           text="+"
         />
         <CounterSection
           title="Our Experience"
           count={28}
-          style="pl-[50px]"
+          style="lg:pl-[50px]"
           text="+"
         />
       </div>
       {/* ------ count section end ------ */}
       {/* ------ ceo and founder information section start ------ */}
-      <TitleBar title="Meet With Our CEO And Founders">
-        <div className="mt-[50px] grid grid-cols-4 gap-7 justify-between">
-          {ceoFounderInfo.map((item) => (
-            <div className="flex flex-col items-center group" key={item.id}>
-              <div className="relative flex flex-col items-center">
-                <Image
-                  className="w-full h-full"
-                  src={item.img}
-                  alt={item.name}
-                />
-                {/* hover end start */}
-                <div className="absolute -bottom-7 left-[40%] group-hover:hidden">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="60"
-                    height="60"
-                    viewBox="0 0 60 60"
-                    fill="none"
-                  >
-                    <circle
-                      cx="30"
-                      cy="30"
-                      r="28.5"
-                      fill="#171D2D"
-                      stroke="white"
-                      stroke-width="3"
-                    />
-                    <line
-                      x1="17"
-                      y1="29.5"
-                      x2="42"
-                      y2="29.5"
-                      stroke="white"
-                      stroke-width="3"
-                    />
-                    <line
-                      x1="30.5"
-                      y1="18"
-                      x2="30.5"
-                      y2="43"
-                      stroke="#CCDEFF"
-                      stroke-width="3"
-                    />
-                  </svg>
-                </div>
-                {/* hover buttom start end */}
-                {/* hover link start start */}
-                <div className="absolute group-hover:block group-hover:bottom-10 hidden">
-                  <div className="flex items-center justify-center gap-5 bg-[#171D2D] rounded-[5px] py-3 px-2">
-                    {item.links.map((e, i) => (
-                      <Link key={i} href={e.to} className="">
-                        <Image className="w-6 h-6" src={e.img} alt="" />
-                      </Link>
-                    ))}
+      <div className="px-5">
+        <TitleBar title="Meet With Our CEO And Founders">
+          <div className="mt-[50px] grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-7 lg:justify-between justify-center">
+            {ceoFounderInfo.map((item) => (
+              <div className="flex flex-col items-center group" key={item.id}>
+                <div className="relative flex flex-col items-center">
+                  <Image className="w-full" src={item.img} alt={item.name} />
+                  {/* hover end start */}
+                  <div className="absolute -bottom-7 left-[40%] group-hover:hidden">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="60"
+                      height="60"
+                      viewBox="0 0 60 60"
+                      fill="none"
+                    >
+                      <circle
+                        cx="30"
+                        cy="30"
+                        r="28.5"
+                        fill="#171D2D"
+                        stroke="white"
+                        stroke-width="3"
+                      />
+                      <line
+                        x1="17"
+                        y1="29.5"
+                        x2="42"
+                        y2="29.5"
+                        stroke="white"
+                        stroke-width="3"
+                      />
+                      <line
+                        x1="30.5"
+                        y1="18"
+                        x2="30.5"
+                        y2="43"
+                        stroke="#CCDEFF"
+                        stroke-width="3"
+                      />
+                    </svg>
                   </div>
+                  {/* hover buttom start end */}
+                  {/* hover link start start */}
+                  <div className="absolute group-hover:block group-hover:bottom-10 hidden">
+                    <div className="flex items-center justify-center gap-5 bg-[#171D2D] rounded-[5px] py-3 px-2">
+                      {item.links.map((e, i) => (
+                        <Link key={i} href={e.to} className="">
+                          <Image className="w-6 h-6" src={e.img} alt="" />
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                  {/* hover link start end */}
                 </div>
-                {/* hover link start end */}
+                <div className="flex flex-col gap-[14px] text-center mt-[50px]">
+                  <h3 className="text-lg font-bold">{item.name}</h3>
+                  <p className="text-paragraph text-[#CF0]">{item.title}</p>
+                </div>
               </div>
-              <div className="flex flex-col gap-[14px] text-center mt-[50px]">
-                <h3 className="text-lg font-bold">{item.name}</h3>
-                <p className="text-paragraph text-[#CF0]">{item.title}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </TitleBar>
+            ))}
+          </div>
+        </TitleBar>
+      </div>
       {/* ------ ceo and founder information section end ------ */}
       {/* ------ contact us section start ------ */}
-      <section className="mt-[120px]">
+      <section
+        className="lg:mt-[120px] mt-[80px]
+      "
+      >
         <ContactFrom />
       </section>
       {/* ------ contact us section end ------ */}
@@ -236,15 +254,15 @@ export default function Home() {
       </section>
       {/* ------ testtimonial section end ------ */}
       {/* ------ Digital Brilliance section start ------ */}
-      <section className="mt-[120px]">
+      <section className="lg:mt-[120px] mt-[80px] px-5">
         <TitleBar title="Empowering Brands With Digital Brilliance">
-          <div className="grid grid-cols-2 mt-[50px] gap-14">
+          <div className="grid lg:grid-cols-2 justify-center lg:justify-start mt-[50px] gap-14">
             {/* left-section  */}
-            <div className="flex flex-col items-center text-paragraph">
+            <div className="flex flex-col items-center sm:text-paragraph text-sm">
               <div className="">
                 <Image src={creativeImg} alt="img" />
               </div>
-              <div className="bg-[#171D2D] rounded-[15px] flex flex-col gap-4 px-10 py-9 w-[580px] -mt-[15%]">
+              <div className="bg-[#171D2D] rounded-[15px] flex flex-col gap-4 px-10 py-9 xl:w-[580px] -mt-[15%]">
                 <div className="flex gap-4">
                   <div className="flex items-center gap-3">
                     {" "}
@@ -286,7 +304,7 @@ export default function Home() {
                     02 Apr 2024
                   </div>
                 </div>
-                <p className=" font-bold w-96">
+                <p className=" font-bold md:w-96">
                   How to Prepare for your First Track his consumer-focused
                 </p>
                 <Link className="text-[#CCFF00]" href="">
@@ -297,11 +315,14 @@ export default function Home() {
             {/* right-section  */}
             <div className="flex flex-col gap-5">
               {digitalBrillianceItem.map((item) => (
-                <div key={item.id} className="flex items-center text-paragraph">
-                  <div className="w-80">
-                    <Image src={item.img} alt="img" />
+                <div
+                  key={item.id}
+                  className="flex md:flex-row flex-col items-center sm:text-paragraph text-sm"
+                >
+                  <div className="md:w-80 w-full">
+                    <Image className="w-full" src={item.img} alt="img" />
                   </div>
-                  <div className="bg-[#171D2D] rounded-[15px] flex flex-col gap-4 p-5 w-[348px] -ml-[10%]">
+                  <div className="bg-[#171D2D] rounded-[15px] flex flex-col gap-4 p-5 md:w-[348px] md:-ml-[10%] -mt-[10%] md:-mt-0">
                     <div className="flex gap-4">
                       <div className="flex items-center gap-3">
                         {" "}

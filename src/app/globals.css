@@ -8,7 +8,7 @@ body {
 
 .slick-prev:before,
 .slick-next:before {
-  font-family: 'Courier New', Courier, monospace !important;
+  font-family: "Courier New", Courier, monospace !important;
   color: black !important;
   font-weight: 700 !important;
   font-size: 30px !important;

@@ -27,7 +27,7 @@ function CounterSection({ count, title, style, text }: countTypes) {
 
   return (
     <div className={`${style}`}>
-      <h2 className="text-[80px] text-[#CF0] font-bold w-[250px] ">
+      <h2 className="sm:text-[80px] text-5xl sm:leading-[100px] leading-[80px] text-[#CF0] font-bold sm:w-[250px] w-full">
         <CountUp end={count} enableScrollSpy={true} />
         {/* {count}  */}
         {text}

@@ -46,11 +46,6 @@ export const navItems = [
   },
   {
     _id: shortid.generate(),
-    title: "PAGES",
-    to: "/",
-  },
-  {
-    _id: shortid.generate(),
     title: "BLOG",
     to: "/blog",
   },
@@ -426,7 +421,7 @@ export const footerItems = [
   },
 ];
 
-// blog details share items 
+// blog details share items
 
 export const sharedItems = [
   {
@@ -526,23 +521,23 @@ export const sharedItems = [
   },
 ];
 
-// tags items 
+// tags items
 
 export const tagItems = [
   {
     id: shortid.generate(),
-    title: "Development"
+    title: "Development",
   },
   {
     id: shortid.generate(),
-    title: "Marketing"
+    title: "Marketing",
   },
   {
     id: shortid.generate(),
-    title: "Email"
+    title: "Email",
   },
 ];
-// categories items 
+// categories items
 
 export const categoriesItems = [
   {

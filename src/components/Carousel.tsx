@@ -57,17 +57,19 @@ function Carousel() {
     <div className="slider-container max-w-[800px] mx-auto mb-20 text-center">
       {/* <h2>Slider Syncing (AsNavFor)</h2>
       <h4>First Slider</h4> */}
-      <h2 className="text-heading font-bold mb-[50px]">What Our Clients Say</h2>
+      <h2 className="sm:text-heading text-3xl font-bold mb-[50px]">
+        What Our Clients Say
+      </h2>
       <Slider
         asNavFor={nav2}
-        nextArrow={<SampleNextArrow />}
-        prevArrow={<SamplePrevArrow />}
+        // nextArrow={<SampleNextArrow />}
+        // prevArrow={<SamplePrevArrow />}
         ref={(slider) => (sliderRef1 = slider)}
       >
         {tasttimonialItem.map((e) => (
           <div
             onClick={() => setHanddelImg(e.id)}
-            className="px-20 text-paragraph"
+            className="px-20 sm:text-paragraph text-sm"
             key={e.id}
           >
             <h3>{e.title}</h3>
@@ -101,7 +103,7 @@ function Carousel() {
               </div>
             </div>
             <div
-              className={` flex-col gap-[10px] mt-6 justify-center text-white ${
+              className={`sm:text-paragraph text-sm flex-col gap-[10px] mt-6 justify-center text-white ${
                 handelImg === e.id ? "flex" : "hidden"
               }`}
             >

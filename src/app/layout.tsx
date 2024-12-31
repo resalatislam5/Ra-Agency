@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.className} text-[#CCDEFF]`}>
+      <body className={`${poppins.className} text-[#CCDEFF] relative`}>
         <Navber />
         {children}
         <Footer />

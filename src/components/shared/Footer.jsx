@@ -8,21 +8,21 @@ import Link from "next/link";
 import { footerItems } from "@/constants";
 function Footer() {
   return (
-    <footer className="mt-[120px] border-[#383737] border-t">
-      <div className="pt-[68px] max-w-7xl mx-auto">
+    <footer className="lg:mt-[120px] mt-[80px] xl:px-0 px-5 border-[#383737] border-t">
+      <div className="lg:pt-[68px]  pt-10 max-w-7xl mx-auto">
         {/*  */}
-        <div className="flex gap-[102px] items-center">
+        <div className="flex lg:gap-[102px] lg:flex-row lg:text-left text-center flex-col gap-5 items-center">
           <div className="flex flex-col gap-5">
-            <h1 className="text-[48px] font-bold">
+            <h1 className="lg:text-[48px] lg:leading-[60px] text-xl font-bold">
               Tell Us About Your Project.
             </h1>
-            <p className="text-paragraph">
+            <p className="lg:text-paragraph text-sm">
               LET&rsquo;S COLLABORATE AND MAKE GREAT STUFF.
             </p>
           </div>
           <div className="flex gap-10">
             <div className="flex items-center gap-2">
-              <p className="text-paragraph">FOLLOW US</p>
+              <p className="lg:text-paragraph text-xs">FOLLOW US</p>
               <div className="">
                 <Image src={arrowL} alt="" />
               </div>
@@ -44,7 +44,7 @@ function Footer() {
           </div>
         </div>
         {/*  */}
-        <div className="grid grid-cols-4 mt-10">
+        <div className="grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-10 mt-10">
           {footerItems.map((item) => (
             <div key={item.id}>
               <h3 className="font-bold">{item.title}</h3>
@@ -65,7 +65,7 @@ function Footer() {
         </div>
       </div>
       <div className="border-[#383737] border-t mt-[50px]">
-        <div className="max-w-7xl mx-auto text-paragraph flex justify-between mt-5 mb-10">
+        <div className="max-w-7xl mx-auto lg:text-paragraph text-xs flex justify-between mt-5 mb-10">
           <p className="">All Rights Reserved.</p>
           <p className="">Terms of Use | Privacy Policy</p>
         </div>
