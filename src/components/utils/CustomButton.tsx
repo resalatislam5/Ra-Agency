@@ -5,7 +5,7 @@ import Link from "next/link";
 function CustomButton({ title, to, style, img }: coustomButtonTypes) {
   return (
     <Link
-      className={`${style} bg-[#CF0] py-4 px-8 rounded-[10px] text-paragraph font-bold text-[#171D2D] flex items-center gap-2`}
+      className={`${style} bg-[#CF0] sm:py-4 sm:px-8 py-3 px-5 rounded-[10px] text-paragraph font-bold text-[#171D2D] flex items-center gap-2`}
       href={to}
     >
       {title}

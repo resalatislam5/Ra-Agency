@@ -49,9 +49,9 @@ function BlogDetails() {
       <CommonBanner pageName="Blog" />
       {/* ------- Banner end --------*/}
       {/* ------- main section start  --------*/}
-      <section className="max-w-7xl mx-auto grid grid-cols-3 mt-[120px] gap-9">
+      <section className="max-w-7xl mx-auto grid lg:grid-cols-3 grid-cols-1 lg:mt-[120px] mt-[80px] gap-9 px-5">
         {/* -------left blog items start----- */}
-        <div className="col-span-2 text-paragraph text-[#9F9F9F]">
+        <div className="lg:col-span-2 text-paragraph text-[#9F9F9F]">
           {/* image */}
           <div className="">
             <Image
@@ -63,7 +63,7 @@ function BlogDetails() {
           </div>
           <div className="my-[30px]">
             <p className="text-[#CF0] py-2">September 14, 2023</p>
-            <h1 className="text-[32px] font-bold text-[#CCDEFF]">
+            <h1 className="text-[32px] leading-10 font-bold text-[#CCDEFF]">
               Our Futuristic Marketin Realtor Should Read
             </h1>
           </div>
@@ -76,7 +76,7 @@ function BlogDetails() {
             normal distributionof letters, as opposed to using Content here,
             content here &apos, making it look like readable English.
           </p>
-          <div className="grid grid-cols-3 my-[50px] gap-7">
+          <div className="grid sm:grid-cols-3 grid-cols-1 my-[50px] gap-7">
             <div className="col-span-1">
               <Image src={creativeOffice} alt=".." />
             </div>
@@ -120,7 +120,7 @@ function BlogDetails() {
             bibendum eu, ultrices placerat sem. Praesent vitae metus auctor.
           </p>
           {/* ----tags and seare section start---- */}
-          <div className="flex justify-between text-2xl text-[#CCDEFF] font-bold my-[30px]">
+          <div className="flex flex-wrap gap-5 justify-between text-2xl text-[#CCDEFF] font-bold my-[30px]">
             <div className="flex gap-5 items-center">
               <p className="">Tags:</p>
               <CustomButton title="Marketing" to="#" />
@@ -150,12 +150,12 @@ function BlogDetails() {
             {commentItems.map((e) => (
               <div
                 key={e.id}
-                className="flex gap-5 border-b last:border-b-0 border-white py-10"
+                className="flex gap-5 border-b last:border-b-0 border-white py-10 w-full"
               >
-                <div className="w-[110px] h-[110px]">
-                  <Image src={e.img} alt="" />
+                <div className="sm:w-[110px] sm:h-[110px] w-[10%] h-10">
+                  <Image className="min-w-full" src={e.img} alt="" />
                 </div>
-                <div className="w-full">
+                <div className="sm:w-full w-[80%]">
                   <div className="flex justify-between">
                     <p className="text-white text-[22px] font-semibold">
                       {e.name}
@@ -205,10 +205,10 @@ function BlogDetails() {
                       key={i}
                       className="flex gap-5 border-b last:border-b-0 border-white pt-[60px] ml-5"
                     >
-                      <div className="w-[110px] h-[110px]">
+                      <div className="sm:w-[110px] sm:h-[110px] w-[10%] h-10">
                         <Image src={item.img} alt="" />
                       </div>
-                      <div className="w-full">
+                      <div className="sm:w-full w-[80%]">
                         <div className="flex justify-between">
                           <p className="text-white text-[22px] font-semibold">
                             {item.name}
@@ -286,7 +286,7 @@ function BlogDetails() {
         </div>
         {/* -------- left blog items end-------- */}
         {/* -------- right blog items start-------- */}
-        <div className="col-span-1 flex flex-col gap-[70px]">
+        <div className="col-span-1 lg:flex hidden flex-col gap-[70px]">
           {/* search-bar  */}
           <SearchBar />
           {/* Recent Posts */}
